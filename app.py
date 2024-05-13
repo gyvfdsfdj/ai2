@@ -16,15 +16,15 @@ def handle_form():
 
     # Validate ID number (assuming it's numeric)
     if not re.match(r'^\d+$', id_number):
-        return "Invalid ID number", 400
+        return "身份證號碼應該為10碼", 400
 
     # Validate name (assuming it's alphabetic)
     if not re.match(r'^[A-Za-z\s]+$', name):
-        return "Invalid name", 400
+        return "第一個字元應該為英文字母碼", 400
 
     # Validate gender
     if gender not in ['Male', 'Female']:
-        return "Invalid gender", 400
+        return "身份證號碼應該為10碼", 400
 
     # Validate email
     if not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', email):
